@@ -40,6 +40,29 @@ for (int i = 0; i < count; i++) {
 
 This snippet highlights parts of the text, creating a more visually appealing UI. User input is handled through `getch()` and `switch` cases, eliminating the need for typing commands directly in the CLI.
 
+Moreover, the app utilizes dynamic memory allocation to manage employee data efficiently:
+
+```c
+if (*empTotal == *capacity) {
+    (*capacity) *= 2;
+    Employee* temp = realloc(*empArray, (*capacity) * sizeof(Employee));
+    if (temp == NULL) {
+        // Reallocation failed
+        system("cls");
+        gotoxy(10, 4);
+        printf("Alert:");
+        gotoxy(10, 8);
+        printf("No enough memory.");
+        gotoxy(10, 10);
+        system("pause");
+        return;
+    }
+    // Update the array pointer
+    *empArray = temp;
+}
+```
+This ensures the program scales dynamically according to the number of employees.
+
 ## Features
 When loading the program, the user is welcomed to the main menu, where they can choose to view existing employees or add a new one.
 

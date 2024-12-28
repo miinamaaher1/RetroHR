@@ -1,4 +1,4 @@
-30,31
+30,30
 id,fName,lName,phone,age,sex,department,salary,overtime,deduction
 1,John,Doe,555-123-4567,30,m,Engineering,75000.00,2000.00,500.00
 2,Jane,Smith,555-234-5678,25,f,Marketing,65000.00,1500.00,300.00

@@ -185,21 +185,21 @@ void selectEmployee(Employee* empArray, int* empTotal) {
                 break;
             
             case LEFT:
-                if (current >= 10) {
+                if (current >= (*empTotal < 10? *empTotal: 10)) {
                     current -= 10;
                 } else {
-                    current += (*empTotal - (*empTotal % 10));
+                    current += (*empTotal - (*empTotal % 10 == 0? 10: *empTotal % 10));
                     if (current >= *empTotal) current = *empTotal - 1;
                 }
                 currentPage = current / 10;
                 break;
 
             case RIGHT:
-                if (current < *empTotal - (*empTotal % 10)) {
+                if (current < *empTotal - (*empTotal % 10 == 0? 10: *empTotal % 10)) {
                     current += 10;
                     if (current >= *empTotal) current = *empTotal - 1;
                 } else {
-                    current -= (*empTotal - (*empTotal % 10));
+                    current -= (*empTotal - (*empTotal % 10 == 0? 10: *empTotal % 10));
                 }
                 currentPage = current / 10;
                 break;
