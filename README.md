@@ -1,5 +1,7 @@
 # RetroHR v4.0
 
+![Logo](screenshots/RetroHR.png)
+
 This project is an application of the [ITI](https://iti.gov.eg/home) Introduction to C Programming course within the Integrated Software Development & Architecture track.
 
 It is a basic employee management system with the ability to add, delete, and view employee data. The application supports paging the employee list into several 10-item pages, allowing navigation between them. It also includes functionality to save and load data automatically when exiting or starting the program.
